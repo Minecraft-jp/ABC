@@ -333,7 +333,7 @@
 
         <footer class="bg-brandHeader border-t border-brandBorder py-6 mt-8 transition-colors duration-500">
             <div class="max-w-7xl mx-auto px-4 text-center space-y-1">
-                <p class="text-xs text-brandMuted">&copy; 2026 The Na-Na-Ni Perfect Collection</p>
+                <p class="text-xs text-brandMuted">&copy; 2026 Cooking Provided by GVN</p>
             </div>
         </footer>
     </div>
@@ -522,8 +522,7 @@
         ];
 
         const externalLinks = [
-            { no: 1, title: "Na-Na-Ni", url: "https://minecraft-jp.github.io/Nanani-URL-Shortener/", icon: "", color: "white", borderColor: "#ec4899" },
-            { no: 2, title: "素人", url: "https://minecraft-jp.github.io/Sirouto/", icon: "user", color: "white", borderColor: "#ec4899" }
+            { no: 1, title: "料理集", url: "https://minecraft-jp.github.io/ABC/", icon: "", color: "white", borderColor: "#e60033" }
         ];
 
         function getStoredData(key, defaultVal) {
@@ -878,7 +877,7 @@
         }
 
         const videos = [
-            { id: 1, title: "ななにーフェラ(第一弾)", url: "https://github.com/Minecraft-jp/Id/raw/refs/heads/main/uuid=0ACC5689-E162-47AD-AAA7-62D69CEA7E43&code=001&library=1&type=3&mode=1&loc=true&cap=true.mp4", thumbnail: "https://github.com/Minecraft-jp/Id/raw/refs/heads/main/photo-output.jpeg", duration: "0:37", date: "2026/06/29", desc: "材料たった3つでできる\n濃厚トリュフチョコ\n#お菓子 #チョコレート #痩せる #材料3つ #おすすめ " }
+            { id: 1, title: "材料たった3つでできる濃厚トリュフチョコ", url: "https://github.com/Minecraft-jp/Id/raw/refs/heads/main/uuid=0ACC5689-E162-47AD-AAA7-62D69CEA7E43&code=001&library=1&type=3&mode=1&loc=true&cap=true.mp4", thumbnail: "https://github.com/Minecraft-jp/Id/raw/refs/heads/main/photo-output.jpeg", duration: "0:17", date: "2026/07/23", desc: "材料たった3つでできる\n濃厚トリュフチョコ\n#お菓子 #チョコレート #痩せる #材料3つ #おすすめ " }
         ];
 
         let activeId = 1;
@@ -967,15 +966,15 @@
         }
 
         async function shareVideo() {
-            const finalShareUrl = `https://minecraft-jp.github.io/Nanani-URL-Shortener/?v=${activeId}`;
+            const finalShareUrl = `https://minecraft-jp.github.io/ABC/`;
             if (navigator.share) {
                 try {
-                    await navigator.share({ title: "ななにー流出", text: "ななにー流出", url: finalShareUrl });
-                    showToast("📤 共有メニューを開きました");
+                    await navigator.share({ title: "料理集", text: "料理", url: finalShareUrl });
+                    showToast("リンクコピーをしました");
                 } catch (error) {}
             } else {
                 const temp = document.createElement("input"); temp.value = finalShareUrl; document.body.appendChild(temp); temp.select(); document.execCommand("copy"); document.body.removeChild(temp);
-                showToast("🔗 リンクをコピーしました！");
+                showToast("リンクをコピーしました");
             }
         }
 
@@ -1002,7 +1001,7 @@
                 const a = document.createElement("a"); a.href = blobUrl; a.download = v.url.substring(v.url.lastIndexOf('/') + 1) || `video_${activeId}.mp4`;
                 document.body.appendChild(a); a.click(); document.body.removeChild(a);
                 setTimeout(() => URL.revokeObjectURL(blobUrl), 10000);
-                showToast("✅ ダウンロード開始");
+                showToast("ダウンロード開始");
             } catch (e) {
                 openDownloadModal(v.url);
             } finally {
