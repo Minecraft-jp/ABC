@@ -1,5 +1,5 @@
 {
-  "name": "Spotify",
+  "name": "The._.Sigh",
   "icons": [
     {
       "src": "https://github.com/Minecraft-jp/Haha/raw/refs/heads/main/192%C3%97192.png",
