@@ -1,0 +1,26 @@
+{
+  "name": "Spotify",
+  "icons": [
+    {
+      "src": "https://github.com/Minecraft-jp/Haha/raw/refs/heads/main/192%C3%97192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://github.com/Minecraft-jp/Haha/raw/refs/heads/main/384%C3%97384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "https://github.com/Minecraft-jp/Haha/raw/refs/heads/main/512%C3%97512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "https://github.com/Minecraft-jp/Haha/raw/refs/heads/main/512%C3%97512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ]
+}
